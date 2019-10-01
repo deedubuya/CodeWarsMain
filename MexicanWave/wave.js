@@ -6,8 +6,37 @@
 // Example
 // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
-function wave() {
+function wave(word) {
     // Code here
+    let arr = [];
+    //let splitWord = word.split("");
+    let letter = "";
+    let newWord = "";
+    let code = 0;
+    // for (let c of word) {
+    //     //console.log(c);
+    //     newWord = newWord.concat(word[i].toUpperCase());
+    //     // letter = c.toUpperCase();
+    //     // if (c != word[i + 1]) {
+    //     //     newWord = word.replace(word[i], letter);
+    //     // } else {
+    //     //     newWord = word.replace(word[i + 1], letter);
+    //     // }
+    //     // i++;
+    //     i++;
+
+
+
+    // }
+    for (let i = 0; i < word.length; i++) {
+        letter = "";
+        code = word[i].charCodeAt(word[i]);
+        letter = String.fromCharCode(code - 32);
+        console.log(newWord.concat(letter, word));
+        //newWord = word.replace(word[i], word[i].toUpperCase());
+        console.log(letter);
+    }
+    console.log(arr);
 
 }
 wave("hello");
